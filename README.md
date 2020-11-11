@@ -1,4 +1,4 @@
 # cc
 Compilation of questions and their solution
 
-### Dynamic Programming
+### 1. Dynamic Programming
