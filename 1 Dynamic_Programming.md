@@ -34,3 +34,19 @@ class Solution:
         else:
             return False
 ```
+
+
+### [House Robber](https://leetcode.com/problems/house-robber/)
+
+```python
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        if(len(nums)>1):
+            nums[1]=max(nums[1],nums[0])
+        for i in range(2,len(nums)):
+            nums[i]=max(nums[i-1],nums[i]+nums[i-2])
+        if(len(nums)):
+            return nums[-1]
+        else:
+            return 0
+```
