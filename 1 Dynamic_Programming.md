@@ -50,3 +50,21 @@ class Solution:
         else:
             return 0
 ```
+
+
+### [counting-bits](https://leetcode.com/problems/counting-bits/)
+
+```python
+import math
+class Solution:
+    def countBits(self, num: int) -> List[int]:
+        dp=[0 for i in range(num+1)]
+        for i in range(1,num+1):
+            if(math.log(i,2)==int(math.log(i,2))):
+                a=i
+                dp[i]=1
+            else:
+                dp[i]=dp[a]+dp[i-a]
+        return (dp)
+        
+```
