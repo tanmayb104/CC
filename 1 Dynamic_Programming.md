@@ -17,3 +17,20 @@ class Solution:
         print(dp)
         return (c)  
 ```
+
+
+### [Divisor Game](https://leetcode.com/problems/divisor-game/)
+
+```python
+class Solution:
+    def divisorGame(self, N: int) -> bool:
+        dp=[0 for i in range(N+1)]
+        for i in range(1,N+1):
+            for j in range(1,i):
+                if(i%j==0):
+                    dp[i]=max(dp[i],not dp[i-j])
+        if(dp[N]):
+            return True
+        else:
+            return False
+```
